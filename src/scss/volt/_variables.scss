@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // Variables
 //
 // Variables should follow the `$component-state-property-size` formula for
@@ -344,8 +346,8 @@ $gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0));
 $spacer: 1rem;
 $spacers: (
   0: 0,
-1: $spacer / 4,
-  2: $spacer / 2,
+  1: math.div($spacer, 4),
+  2: math.div($spacer, 2),
   3: $spacer,
   4: $spacer * 1.5,
   5: $spacer * 3,
@@ -463,7 +465,7 @@ $border-radius-md:            .2rem;
 $border-radius-sm:            .1rem;
 $border-radius-pill:           2rem;
 $circle-radius:                50%;
-$organic-radius:               63% 37% 30% 70% / 50% 45% 55% 50%;
+$organic-radius:               63% 37% 30% 70% / 50%;
 
 $component-active-color:        $white;
 $component-active-bg:           $primary;
